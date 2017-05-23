@@ -14,7 +14,7 @@ app.get(["/new*", "/new"], (req, res) => {
             const urls = db.collection("urls");
             let alreadyExists = false;
             let foundAt = -1;
-            urls.find({}).forEach((x) => { if (x.url === url) alreadyExists = true; foundAt = x.index; console.log(x) }, (err) => {
+            urls.find({}).forEach((x) => { if (x.url === url) alreadyExists = true; foundAt = x.index; }, (err) => {
                 if (err) throw err;
 
                 if (!alreadyExists) {
@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
     const index = [];
     MongoClient.connect(process.env.MONGODB_URL, (err, db) => {
         if (err) throw err;
-        
+
         db.collection("urls").find({}).forEach((x) => index.push(x), (err) => {
             if (err) throw err;
 
