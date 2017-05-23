@@ -3,13 +3,25 @@
   "version": "1.0.0",
   "description": "shortens urls",
   "main": "server.js",
+  "engines": {
+      "node": "7.8.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "ColeTrammer",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
     "mongodb": "^2.2.27"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColeTrammer/url_shortener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ColeTrammer/url_shortener/issues"
+  },
+  "homepage": "https://github.com/ColeTrammer/url_shortener#readme"
 }
